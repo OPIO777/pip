@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ task.title }}</h1>
+  <p>{{ task.description }}</p>
+  <p>Due Date: {{ task.due_date }}</p>
+  <p>Completed: {{ task.completed }}</p>
+  <p>Skipped: {{ task.skipped }}</p>
+  <p>Reminder Time: {{ task.reminder_time }}</p>
+  <p>Created At: {{ task.created_at }}</p>
+  {% if task.is_overdue %}
+    <p>This task is overdue!</p>
+  {% endif %}
+  <a href="{% url 'task_update' task.pk %}">Edit</a>
+  <a href="{% url 'task_delete' task.pk %}">Delete</a>
+  {% if not task.completed %}
+    <a href="{% url 'task_complete' task.pk %}">Complete</a>
+  {% endif %}
+  {% if not task.skipped %}
+    <a href="{% url 'task_skip' task.pk %}">Skip</a>
+  {% endif %}
+{% endblock %}

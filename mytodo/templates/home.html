@@ -1,0 +1,42 @@
+
+
+{% load static %}
+<title>TASKMASTER</title>
+<head>TASKMASTER
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body style="background-color:powderblue;">
+    <h4>Task Master</h4>
+    <h1>Master your tasks with TaskMaster</h1>
+    <p>Stay organized, achieve your goals and simplify your life with our intuitive task management app</p>
+    <button style =  'background-color: tomato;' onclick ="{% url 'register' %}">REGISTER</button>  <button onclick="{% url 'login' %}">LOGIN<button/>
+    <br>
+    <br>
+    <br>
+     <div>
+    <img src="{% static 'images/pexels-ylanite-koppens-1809340.jpg' %}" height = '300'>
+<!--    <div class="text-container" >-->
+<!--    </div>-->
+    <h2>Easy Task Creation</h2>
+    <p>create tasks easily and quickly, prioritize them and stay on track with your daily or weekly goals.</p>
+    </div>
+    <br>
+
+    <img src="{% static 'images/pexels-tranmautritam-68763.jpg' %}" height = '300'>
+<!--    <div class="text-container">-->
+<!--    </div>-->
+    <h2>Seamless Task Management</h2>
+    <p>View, update and delete tasks with ease, and mark them as complete once you've finished them. If you miss a task, simply skip it and move on.</p>
+
+    <img src="{% static 'images/pexels-ivan-samkov-7394714.jpg' %}" height = '300'>
+<!--    <div class="text-container">-->
+<!--    </div>-->
+    <h2>Personalized experience.</h2>
+    <p>With a login page, you can access your personalized to-do list from any device. Set notifications and reminders for important tasks and stay on top of your schedule.</p>
+
+<!--     <button onclick="{% url 'register' %}">GET STARTED</button>-->
+
+
+</body>
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+        .img-float-left{
+            float: left;
+            margin-right: 10px;
+        }
+
+        .text-container{
+            overflow: hidden;
+        }
+        .text-container p{
+            text-align: justify;
+        }
+        .text-container h{
+            text-align: justify;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="text-container">
+       {% block content %}
+
+       {% endblock content %}
+
+   </div>
+
+</body>
+</html>
